@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.0.RC5")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+war {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile("org.hibernate:hibernate-entitymanager:4.1.9.Final")
+    compile("org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final")
+    compile("mysql:mysql-connector-java:5.1.16")
+    compile("org.springframework.security:spring-security-web:3.2.1.RELEASE")
+    compile("org.springframework.security:spring-security-config:3.2.1.RELEASE")
+    compile("org.springframework:spring-orm:4.0.2.RELEASE")
+    compile("javax.servlet.jsp:jsp-api:2.1")
+    compile("javax.servlet:jstl:1.2");
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
