@@ -13,7 +13,7 @@
 <body>
 <h1>Second Admin page</h1>
 <p>
-<a href="<c:url value="/j_spring_security_logout" />" >Logout</a> <br/>
+<a href="<c:url value="/logout" />" >Logout</a> <br/>
 <a href="${pageContext.request.contextPath}/index.html">Home page</a><br/>
 </p>
 </body>

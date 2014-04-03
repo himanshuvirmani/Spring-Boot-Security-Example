@@ -25,16 +25,16 @@
 </c:if>
 </p>
 
-<form method="post" action="<c:url value='j_spring_security_check'/>" >
+<form method="post" action="<c:url value='/login'/>" >
 <table>
 <tbody>
 <tr>
 <td>Login:</td>
-<td><input type="text" name="j_username" id="j_username"size="30" maxlength="40"  /></td>
+<td><input type="text" name="username" id="username" size="30" maxlength="40"  /></td>
 </tr>
 <tr>
 <td>Password:</td>
-<td><input type="password" name="j_password" id="j_password" size="30" maxlength="32" /></td>
+<td><input type="password" name="password" id="password" size="30" maxlength="32" /></td>
 </tr>
 <tr>
 <td></td>

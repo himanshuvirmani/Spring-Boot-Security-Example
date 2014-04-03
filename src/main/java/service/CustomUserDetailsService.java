@@ -35,8 +35,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 		boolean accountNonExpired = true;
 		boolean credentialsNonExpired = true;
 		boolean accountNonLocked = true;
-		logger.debug("XXX User name " + domainUser.getLogin());
-		logger.error("XXX User Role " + domainUser.getRole().getRole());
+		logger.info("XXX User name " + domainUser.getLogin());
+		logger.info("XXX User Role " + domainUser.getRole().getRole());
 		return new User(
 				domainUser.getLogin(), 
 				domainUser.getPassword(), 

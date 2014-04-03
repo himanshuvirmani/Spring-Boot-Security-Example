@@ -31,7 +31,7 @@ public class UserDetailsController {
 
 		UserDetails userDetails = new UserDetails(uuid, email);
 
-		logger.debug("XXX User id and email  " + uuid + " " + email);
+		logger.info("XXX User id and email  " + uuid + " " + email);
 		Session session = openSession();
 		session.beginTransaction();
 		session.save(userDetails);

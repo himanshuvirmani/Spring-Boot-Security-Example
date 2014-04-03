@@ -11,7 +11,6 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 @Configuration
 @EnableWebMvc
 @ComponentScan("controller")
-@ImportResource("classpath:spring-security.xml")
 public class WebAppConfig {
 	
 	@Bean
