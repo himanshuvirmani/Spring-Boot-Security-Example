@@ -9,7 +9,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 @Repository
-@Transactional
 public class RoleDAOImpl{
 	
 	@Autowired

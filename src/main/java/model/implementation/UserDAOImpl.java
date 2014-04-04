@@ -15,7 +15,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 @Repository
-@Transactional
 public class UserDAOImpl{
 	
 	private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
