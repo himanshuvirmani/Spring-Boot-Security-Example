@@ -22,13 +22,16 @@ public class CustomUserDetailsService implements UserDetailsService {
 	
 	private static final Logger logger = Logger.getLogger(CustomUserDetailsService.class);
 	
+	public CustomUserDetailsService(){
+
+	}
+	
 	@Autowired
 	private UserDAOImpl userDAO;	
 	
 	@Override
 	public UserDetails loadUserByUsername(String login)
 			throws UsernameNotFoundException {
-		
 		AdminUser domainUser = userDAO.getUser(login);
 		
 		boolean enabled = true;
@@ -37,6 +40,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		boolean accountNonLocked = true;
 		logger.info("XXX User name " + domainUser.getLogin());
 		logger.info("XXX User Role " + domainUser.getRole().getRole());
+		logger.debug("XXX User Role ID " + domainUser.getRole().getId());
 		return new User(
 				domainUser.getLogin(), 
 				domainUser.getPassword(), 
@@ -63,6 +67,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		} else if (role.intValue() == 2) {
 			roles.add("ROLE_MODERATOR");
 		}
+		logger.debug("XXX User Roles Size " + roles.size());
 		return roles;
 	}
 	

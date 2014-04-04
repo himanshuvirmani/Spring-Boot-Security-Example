@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- This file is the default logback configuration for Spring Boot. To 
+		use the same defaults and add custom logger levels you can copy this file 
+		and add additional overrides, e.g: <include resource="org/springframework/boot/logging/logback/base.xml"/> 
+		<logger name="org.springframework.web" level="DEBUG"/> ... -->
+
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+
+	<!-- Global level for all Hibernate logs -->
+	<logger name="org.hibernate" level="ALL" />
+
+	<!-- Log HQL query parser activity -->
+	<logger name="org.hibernate.hql.ast.AST" level="ALL" />
+	<!-- Log just the SQL -->
+	<logger name="org.hibernate.SQL" level="ALL" />
+	<!-- Log JDBC bind parameters -->
+	<logger name="org.hibernate.type" level="ALL" />
+	<!-- Log schema export/update -->
+	<logger name="org.hibernate.tool.hbm2ddl" level="ALL" />
+	<!-- Log HQL parse trees -->
+	<logger name="org.hibernate.hql" level="ALL" />
+	<!-- Log cache activity -->
+	<logger name="org.hibernate.cache" level="ALL" />
+	<!-- Log transaction activity -->
+	<logger name="org.hibernate.transaction" level="ALL" />
+	<!-- Log JDBC resource acquisition -->
+	<logger name="org.hibernate.jdbc" level="ALL" />
+	<!-- Enable the following line if you want to track down connection leakages 
+		when using DriverManagerConnectionProvider -->
+	<logger name="org.hibernate.connection.DriverManagerConnectionProvider"
+		level="ALL" />
+	<!-- Log prepared statement cache activity -->
+	<logger name="org.hibernate.ps.PreparedStatementCache" level="ALL" />
+
+	<logger name="org.springframework.web" level="DEBUG" />
+
+
+</configuration>
