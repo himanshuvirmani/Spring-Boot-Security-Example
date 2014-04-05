@@ -1,9 +1,8 @@
-package controller;
+package org.himanshu.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-import model.Greeting;
-
+import org.himanshu.model.Greeting;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

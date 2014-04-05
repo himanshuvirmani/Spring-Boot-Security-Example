@@ -1,4 +1,4 @@
-package model;
+package org.himanshu.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package model;
+package org.himanshu.model;
 
 public class Greeting {
 

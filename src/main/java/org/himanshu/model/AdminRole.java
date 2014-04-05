@@ -1,4 +1,4 @@
-package model;
+package org.himanshu.model;
 
 import java.util.Set;
 

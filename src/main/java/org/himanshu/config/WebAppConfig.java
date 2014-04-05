@@ -1,4 +1,4 @@
-package config;
+package org.himanshu.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("controller")
+@ComponentScan("org.himanshu.controller")
 public class WebAppConfig {
 	
 	@Bean

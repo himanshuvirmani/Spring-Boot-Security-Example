@@ -1,13 +1,12 @@
-package service;
+package org.himanshu.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import model.AdminUser;
-import model.implementation.UserDAOImpl;
-
 import org.apache.log4j.Logger;
+import org.himanshu.model.AdminUser;
+import org.himanshu.model.implementation.UserDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

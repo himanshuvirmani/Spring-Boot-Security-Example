@@ -1,8 +1,7 @@
-package service;
+package org.himanshu.service;
 
-import model.AdminUser;
-import model.implementation.UserDAOImpl;
-
+import org.himanshu.model.AdminUser;
+import org.himanshu.model.implementation.UserDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

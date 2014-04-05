@@ -1,8 +1,7 @@
-package service;
+package org.himanshu.service;
 
-import model.AdminRole;
-import model.implementation.RoleDAOImpl;
-
+import org.himanshu.model.AdminRole;
+import org.himanshu.model.implementation.RoleDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

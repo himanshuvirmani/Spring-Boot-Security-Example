@@ -1,4 +1,4 @@
-package config;
+package org.himanshu.config;
 
 
 import java.util.Properties;
@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableConfigurationProperties
 @EnableTransactionManagement
 @EnableAutoConfiguration
-@PropertySource({"classpath:application.properties","classpath:log4j.properties"})
+@PropertySource({"classpath:application.properties"})
 
 public class Application {
 	

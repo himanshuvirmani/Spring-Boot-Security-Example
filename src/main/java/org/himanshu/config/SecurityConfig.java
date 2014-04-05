@@ -1,4 +1,4 @@
-package config;
+package org.himanshu.config;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.servlet.configuration.
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
-@ComponentScan({"service","model"})
+@ComponentScan({"org.himanshu.service","org.himanshu.model"})
 @EnableWebMvcSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		logger.info("XXX configure HTTP User detail service");
+		logger.info("XXX configure HTTP User detail org.himanshu.service");
 		
 		http.userDetailsService(customUserDetailsService)
 			.csrf().disable()

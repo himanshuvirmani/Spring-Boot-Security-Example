@@ -1,7 +1,7 @@
 /**
  * 
  */
-package config;
+package org.himanshu.config;
 
 /**
  * @author himanshu
