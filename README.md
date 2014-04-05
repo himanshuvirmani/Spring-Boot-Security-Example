@@ -1,12 +1,25 @@
 Spring-Boot-Security-Example
 ============================    
 
+This project is a combination of spring boot rest web services, spring-security and spring boot jar to war implementations using Java Springs, Hibernate and MySQL. I decided to add this to public github because it took me some effort to get things running as there are limited examples of Spring Boot available. Also while since most examples on internet as of today use standard xml configurations for servlet mapping, hibernate configurations etc., it was difficult to map those in Spring Boot as it used annotations for basically everything. 
+
+This project can serve as a template or starting point as it contains both of a simple webservice and spring mvc. Find below some projects that I referenced while creating this template example. 
+
+- https://spring.io/guides/gs/rest-service/
+
+- https://spring.io/guides/gs/convert-jar-to-war/
+
+- https://github.com/Fruzenshtein/security-spr
+
 ---
+
+# Other Dependencies (Apart from code here)
+
+
 
 ##Creating tables in mysql  
 
----  
-    
+  
 #### Create a basic table to try simple add user request using Spring Boot, Hibernate and MySQl.
 
     mysql> CREATE TABLE `USER_DETAILS` (
