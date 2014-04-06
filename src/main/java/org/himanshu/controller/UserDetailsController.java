@@ -1,9 +1,8 @@
 package org.himanshu.controller;
 
 import org.apache.log4j.Logger;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.himanshu.model.UserDetails;
+import org.himanshu.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +15,8 @@ public class UserDetailsController {
 	private static final Logger logger = Logger.getLogger(UserDetailsController.class);
 	
 	@Autowired
-	private SessionFactory sessionFactory;
+	UserDetailsServiceImpl userDetailsService;
 	
-	private Session openSession() {
-		return sessionFactory.getCurrentSession();
-	}
-
 	@RequestMapping("/addUser")
 	public @ResponseBody
 	UserDetails addUser(
@@ -31,11 +26,7 @@ public class UserDetailsController {
 		UserDetails userDetails = new UserDetails(uuid, email);
 
 		logger.info("XXX User id and email  " + uuid + " " + email);
-		Session session = openSession();
-		session.beginTransaction();
-		session.save(userDetails);
-		session.getTransaction().commit();
-
+		userDetailsService.addUser(userDetails);
 		return userDetails;
 	}
 }

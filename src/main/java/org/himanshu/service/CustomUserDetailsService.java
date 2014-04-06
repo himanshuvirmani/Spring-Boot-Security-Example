@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.himanshu.model.AdminUser;
-import org.himanshu.model.implementation.UserDAOImpl;
+import org.himanshu.model.implementation.AdminUserDAOImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,7 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	private static final Logger logger = Logger.getLogger(CustomUserDetailsService.class);
 	
 	@Autowired
-	private UserDAOImpl userDAO;	
+	private AdminUserDAOImpl userDAO;	
 	
 	@Override
 	@Transactional

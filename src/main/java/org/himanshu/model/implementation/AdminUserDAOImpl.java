@@ -3,20 +3,19 @@ package org.himanshu.model.implementation;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.himanshu.model.AdminUser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserDAOImpl{
+public class AdminUserDAOImpl{
 	
-	private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
+	private static final Logger logger = Logger.getLogger(AdminUserDAOImpl.class);
 	
 	@Autowired
 	private SessionFactory sessionFactory;
